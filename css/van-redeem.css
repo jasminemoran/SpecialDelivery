@@ -1,0 +1,36 @@
+/*
+*   Jasmine Moran
+*   April 4th, 2023
+*   Description: This is the stylesheet for the extension "Delivery!"
+*/
+
+
+body {
+  background: #000000;//transparent;
+  overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue",
+  Arial, "Noto Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+button{
+  font-size:30px;
+}
+
+#canvas {
+  z-index: 1;
+}
+
+#test-buttons {
+  color: rgb(228, 228, 231);
+  font-size: 20px;
+  text-align: center;
+  z-index: 2;
+  font-size:20px;
+}
