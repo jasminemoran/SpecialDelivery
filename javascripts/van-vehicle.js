@@ -20,7 +20,7 @@ var scale = 0.9,
     width   = 200,
     height  = 150,
     wheelSize = 60 * scale,
-    xx = 700,
+    xx = 600,
     yy = 800;
 
 var colorA = '#f55a3c',
@@ -83,18 +83,13 @@ class Van {
 
     // Orient vertices around the center of mass at origin ( 0, 0 )
     var centre = Matter.Vertices.centre( vertices );
-    Matter.Vertices.translate(vertices, centre, -1);
 
     // Save part's offset from its parent
-    body.position.x += centre.x;
-    body.position.y += centre.y;
+    body.position.x += centre.x - 320;
+    body.position.y +=  centre.y - 135;
 
     // Update inertia while vertices are at origin ( 0, 0 )
     Matter.Body.setInertia( body, Body._inertiaScale * Matter.Vertices.inertia( vertices, body.mass ) );
-
-    // Update geometry
-    Matter.Vertices.translate( vertices, body.position );
-    Matter.Bounds.update( body.bounds, vertices, body.velocity );
 
     var collider = Bodies.fromVertices( xx, yy, sensorVertices, {
       isStatic: false,
